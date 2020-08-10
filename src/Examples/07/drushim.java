@@ -47,12 +47,6 @@ public class drushim {
 
             goToOldSite();
 
-            // driver.findElement(By.linkText("QA")).click();
-            // driver.findElement(By.xpath("//label[text()='7 שנים ומעלה']")).click();
-            // driver.findElement(By.xpath("//label[text()='5-6 שנים']")).click();
-            // driver.findElement(By.xpath("//label[text()='3-4 שנים']")).click();
-            // driver.findElement(By.className("area")).click();
-
             // Change this URL to your needs
             driver.get("https://www.drushim.co.il/jobs/cat24/area/1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17/?scope=1-2&advanced=1&experience=1-2");
 
