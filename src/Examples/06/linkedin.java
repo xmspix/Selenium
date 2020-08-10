@@ -1,3 +1,9 @@
+/*
+    LinkedIn - Connecting with people on autopilot
+    Built by Mark Stoler - mark.stoler.86@gmail.com
+    2020
+*/
+
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -9,12 +15,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class linkedin {
-    public static String user = ""; // add username
-    public static String pass = ""; // add password
-    public static String search = "qa manager";
+    public static String user = ""; // user name / email
+    public static String pass = ""; // password
+    public static String search = "qa manager"; // something to search
+    public static String webDriverLocation = "./tmp/chromedriver"; // change chrome driver location
     public static int countPeople = 0;
     public static int page = 1;
-    public static int minPeopleToAdd = 90;
+    public static int peopleToAdd = 90;
 
     public static WebDriver driver;
     public static JavascriptExecutor js;
@@ -91,12 +98,12 @@ public class linkedin {
     }
 
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver", "./tmp/chromedriver");
+        System.setProperty("webdriver.chrome.driver", webDriverLocation);
         driver = new ChromeDriver();
 
         login();
 
-        while (countPeople <= minPeopleToAdd) {
+        while (countPeople <= peopleToAdd) {
             connect();
         }
 
